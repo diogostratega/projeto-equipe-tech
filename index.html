@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Secular+One&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/estilos.css">
+</head>
+
+<body>
+    <main class="personagens">
+        <div class="personagem selecionado">
+            <picture>
+                <source srcset="./src/imagens/bg-pergola.png" media="(min-width: 768px)" />
+                <img class="imagem" src="src/imagens/bg-pergola-mobile.png" alt="Personagem MistyByte">
+            </picture>
+            <div class="conteudo">
+                <h2 class="nome-personagem">MistyByte</h2>
+                <p class="descricao">Pérola Bellagola, é a mais nova integrante da equipe de desenvolvimento web. Mesmo
+                    carregando inseguranças típicas de quem está começando, sua curiosidade e vontade de aprender fazem
+                    dela alguém impossível de ignorar. Entre erros, anotações e linhas de código, ela transforma cada
+                    desafio em mais um passo para se tornar uma grande desenvolvedora.</p>
+            </div>
+        </div>
+
+        <div class="personagem">
+            <picture>
+                <source srcset="./src/imagens/bg-lajara.png" media="(min-width: 768px)" />
+                <img class="imagem" src="src/imagens/bg-lajara-mobile.png" alt="Personagem CrimsonLayer">
+            </picture>
+            <div class="conteudo">
+                <h2 class="nome-personagem">CrimsonLayer</h2>
+                <p class="descricao">Miguel Lajara é um designer brilhante conhecido por transformar caos em
+                    identidade visual. Rebelde, provocador e sempre com um olhar de desinteresse, ele prefere deixar
+                    suas artes falarem por si. Entre camadas vermelhas, ideias impulsivas e noites sem dormir,
+                    CrimsonLayer se tornou o símbolo criativo mais imprevisível da equipe.</p>
+            </div>
+        </div>
+
+        <div class="personagem">
+            <picture>
+                <source srcset="./src/imagens/bg-estela.png" media="(min-width: 768px)" />
+                <img class="imagem" src="src/imagens/bg-estela-mobile.png" alt="Personagem SilentCode">
+            </picture>
+            <div class="conteudo">
+                <h2 class="nome-personagem">SilentCode</h2>
+                <p class="descricao">Ester “Estela” Lajara é especialista em cybersegurança e responsável por manter
+                    toda a equipe protegida. Reservada, disciplinada e extremamente focada, ela raramente demonstra
+                    emoções enquanto trabalha. Sua presença silenciosa e estratégica faz com que até os problemas
+                    mais perigosos pareçam estar sempre sob controle.</p>
+            </div>
+        </div>
+
+        <div class="personagem">
+            <picture>
+                <source srcset="./src/imagens/bg-rafael.png" media="(min-width: 768px)" />
+                <img class="imagem" src="src/imagens/bg-rafael-mobile.png" alt="Personagem PrimeLogic">
+            </picture>
+            <div class="conteudo">
+                <h2 class="nome-personagem">PrimeLogic</h2>
+                <p class="descricao">Rafael Cavalcanti é o líder da equipe e o responsável por manter todos
+                    sincronizados mesmo em meio ao caos. Inteligente, analítico e sempre alguns passos à frente, ele
+                    acredita que liderança é inspirar pessoas a alcançarem o próprio potencial. Com lógica afiada e
+                    postura firme, PrimeLogic se tornou a base que sustenta toda a equipe.</p>
+            </div>
+        </div>
+
+    </main>
+    <ul class="botoes">
+        <li>
+            <button class="botao mistybyte selecionado">
+                <img src="./src/imagens/icone-pergola.png" alt="Ícone MistyByte">
+            </button>
+        </li>
+        <li>
+            <button class="botao crimsonlayer">
+                <img src="./src/imagens/icone-lajara.png" alt="Ícone CrimsonLayer">
+            </button>
+        </li>
+        <li>
+            <button class="botao silentcode">
+                <img src="./src/imagens/icone-estela.png" alt="Ícone SilentCode">
+            </button>
+        </li>
+        <li>
+            <button class="botao primelogic">
+                <img src="./src/imagens/icone-rafael.png" alt="Ícone PrimeLogic">
+            </button>
+        </li>
+    </ul>
+</body>
+
+</html>
