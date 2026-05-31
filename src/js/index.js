@@ -1,30 +1,85 @@
 /*
-    O que precisamos fazer? - quando clicar no botão do personagem na lista, temos que marcar o botão como selecionado e mostrar o personagem correspondente
+========================================
+OBJETIVO
+========================================
 
-        OBJETIVO 1 - quando clicar no botão do personagem na lista, marcar o botão selecionado
-            passo1 - pegar os botões no JS pra poder verificar quando o usuário clicar em cima de um deles
-            passo 2 - adicionar a classe "selecionado" no botão que o usuário clicou
-            passo 3 - verificar se já existe um botão selecionado, se sim, devemos remover a seleção dele
+Quando o usuário clicar em um personagem:
 
-        Objetivo 2 - quando clicar no botão do personagem, mostrar as informações do personagem
-        passo 1 - pegar os personagens no JS pra poder mostrar ou esconder ele
-        passo 2 - adicionar a classe "selecionado" no personagem que o usuário selecionou
-        passo 3 - verificar se já exista um personagem selecionado, se sim, devemos remover a seleção dele */
+1. Destacar o botão clicado.
+2. Exibir o personagem correspondente.
 
-const botoes = document.querySelectorAll('.botao');
-const personagens = document.querySelectorAll('.personagem');
+========================================
+ELEMENTOS DA PÁGINA
+========================================
+*/
 
+// Lista de botões dos personagens
+const botoes = document.querySelectorAll(".botao");
+
+// Lista de personagens
+const personagens = document.querySelectorAll(".personagem");
+
+/*
+========================================
+EVENTOS
+========================================
+*/
+
+// Adiciona evento de clique para cada botão
 botoes.forEach((botao, indice) => {
     botao.addEventListener("click", () => {
-
-        const botaoSelecionado = document.querySelector(".botao.selecionado");
-        botaoSelecionado.classList.remove("selecionado");
-
-        botao.classList.add("selecionado");
-
-        const personagemSelecionado = document.querySelector(".personagem.selecionado");
-        personagemSelecionado.classList.remove("selecionado");
-
-        personagens[indice].classList.add("selecionado")
+        trocarPersonagem(botao, indice);
     });
 });
+
+/*
+========================================
+FLUXO PRINCIPAL
+========================================
+*/
+
+/**
+ * Executa todas as ações necessárias
+ * ao trocar de personagem
+ */
+function trocarPersonagem(botao, indice) {
+    atualizarBotaoSelecionado(botao);
+
+    atualizarPersonagemSelecionado(indice);
+}
+
+/*
+========================================
+BOTÕES
+========================================
+*/
+
+/**
+ * Remove a seleção atual e seleciona
+ * o botão clicado
+ */
+function atualizarBotaoSelecionado(botao) {
+    const botaoSelecionado = document.querySelector(".botao.selecionado");
+
+    botaoSelecionado.classList.remove("selecionado");
+
+    botao.classList.add("selecionado");
+}
+
+/*
+========================================
+PERSONAGENS
+========================================
+*/
+
+/**
+ * Remove o personagem atual e exibe
+ * o personagem correspondente ao botão
+ */
+function atualizarPersonagemSelecionado(indice) {
+    const personagemSelecionado = document.querySelector(".personagem.selecionado");
+
+    personagemSelecionado.classList.remove("selecionado");
+
+    personagens[indice].classList.add("selecionado");
+}
